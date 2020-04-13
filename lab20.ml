@@ -1,4 +1,3 @@
-
 type image = float list list ;;
 (* images are lists of lists of floats between 0. (white) and 1. (black) *)
 type size = int * int ;;
@@ -8,7 +7,7 @@ open Graphics ;;
 value are black *)
 let threshold img threshold =
   List.map  (fun row -> List.map (fun v -> if v <= threshold then 0. else 1.)
-				 row) img
+                                 row) img
        
 (* show the image *)
 let depict img =
@@ -25,8 +24,8 @@ let dither img =
     (fun row ->
      List.map
        (fun v -> if v > Random.float 1.
-		 then 1.
-		 else 0.) row)
+                 then 1.
+                 else 0.) row)
     img
     
 let mona = Monalisa.image ;;
@@ -38,4 +37,4 @@ let mona = Monalisa.image ;;
       
     let mona_dither = dither mona ;;
       depict mona_dither ;;
-	
+           
