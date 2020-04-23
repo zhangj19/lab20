@@ -19,6 +19,7 @@ let depict img =
   Unix.sleep 2; Graphics.close_graph () ;;
 
 (* dither max image -- dithered image *)
+
 let dither img =
   List.map
     (fun row ->
